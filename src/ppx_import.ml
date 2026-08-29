@@ -302,7 +302,7 @@ let ptype_decl_of_ttype_decl ~manifest ~subst ptype_name
     Ppxlib.(
       match Compat.migrate_type_kind ttype_decl.type_kind with
       | Type_abstract -> Ptype_abstract
-      | Type_external -> Ptype_external
+      | Type_external -> Ptype_abstract
       | Type_open -> Ptype_open
       | Type_record (labels, _) -> Ptype_record (map_labels labels)
       | Type_variant constrs ->
